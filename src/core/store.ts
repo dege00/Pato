@@ -34,7 +34,7 @@ export function defineStore(
     const container = pato ?? getActivePato()
     if (!container) {
       throw new Error(
-        '[pato] Nenhum Pato ativo. Chame createPato() ou passe o container para useStore().'
+        '[pato] Ativou não dr. Chame createPato() ou passe o container para useStore().'
       )
     }
 
