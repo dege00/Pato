@@ -1,7 +1,7 @@
 {
-  "name": "pato",
-  "version": "1.0.0",
-  "description": "Gerenciador de estado reativo e framework-agnostic inspirado no Pinia",
+  "name": "@dege00/patu",
+  "version": "0.0.1",
+  "description": "Gerenciador de estado tipo o pinia mas sem o vue",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
