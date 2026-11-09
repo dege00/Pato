@@ -8,4 +8,4 @@ Eu só acho pato um bicho bonitin mesmo.
 So quis fazer um negocio igual o Pinia, mas fora do vue msm. 
 e foi assim que nasceu o projeto. Não me pergunte o que uma coisa tem a ver com a outra. 🐥
 
-**quak, qrack!**
+**quak, qrack!** 🦆

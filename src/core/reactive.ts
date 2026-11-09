@@ -119,10 +119,14 @@ function criarManipuladoresReativos(): ProxyHandler<object> {
     },
 
     set(alvo, chave, valor, receptor) {
+      const tinhaChave = Object.prototype.hasOwnProperty.call(alvo, chave)
       const valorAnterior = Reflect.get(alvo, chave, receptor)
       const resultado = Reflect.set(alvo, chave, valor, receptor)
 
-      if (!Object.is(valorAnterior, valor)) disparar(alvo, chave)
+      if (!Object.is(valorAnterior, valor)) {
+        disparar(alvo, chave)
+        if (!tinhaChave) disparar(alvo, CHAVE_ITERACAO)
+      }
       return resultado
     },
 
@@ -130,7 +134,10 @@ function criarManipuladoresReativos(): ProxyHandler<object> {
       const tinhaChave = Object.prototype.hasOwnProperty.call(alvo, chave)
       const resultado = Reflect.deleteProperty(alvo, chave)
 
-      if (tinhaChave) disparar(alvo, chave)
+      if (tinhaChave) {
+        disparar(alvo, chave)
+        disparar(alvo, CHAVE_ITERACAO)
+      }
       return resultado
     },
 
