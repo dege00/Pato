@@ -23,7 +23,19 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
-  "keywords": [],
+  "keywords": [
+    "pinia",
+    "state-management",
+    "vue",
+    "react",
+    "reactive"
+  ],
+  "author": "dege00",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dege00/Pato.git"
+  },
   "devDependencies": {
     "tsup": "^9.0.0",
     "typescript": "^7.0.2",
