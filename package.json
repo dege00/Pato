@@ -16,7 +16,11 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsup src/index.ts --format esm,cjs --clean && tsc -p tsconfig.build.json",
     "dev": "tsup src/index.ts --format esm,cjs --watch",
     "typecheck": "tsc --noEmit",
